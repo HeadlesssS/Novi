@@ -25,7 +25,7 @@ function Features() {
           >
             Everyone, Everything at sync
             <br />
-            <em>with your New Manager Novi</em>
+            <em>& Novi keeps it that way.</em>
           </motion.h2>
 
           <motion.p

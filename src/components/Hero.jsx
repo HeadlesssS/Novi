@@ -1,79 +1,79 @@
-    import { ArrowRight, Play } from "lucide-react";
-    import { motion } from "motion/react";
-    import FeatureStory from "./FeatureStory";
+import { ArrowRight, Play } from "lucide-react";
+import { motion } from "motion/react";
+import FeatureStory from "./FeatureStory";
 
-    const entrance = {
-    hidden: { opacity: 0, y: 24 },
-    visible: (delay = 0) => ({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
-    }),
-    };
+const entrance = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
 
-    function Hero() {
-    return (
-        <section className="hero-section" id="top">
-        <div className="container hero-copy">
-            <motion.p
-            className="eyebrow"
-            variants={entrance}
-            initial="hidden"
-            animate="visible"
-            custom={0.05}
-            >
-            <span className="eyebrow-dot" /> BUILT FOR SMALL TEAMS
-            </motion.p>
-            <motion.h1
-            variants={entrance}
-            initial="hidden"
-            animate="visible"
-            custom={0.12}
-            >
-            Less switching.
-            <br />
-            <em>More shipping.</em>
-            </motion.h1>
-            <motion.p
-            className="hero-description"
-            variants={entrance}
-            initial="hidden"
-            animate="visible"
-            custom={0.2}
-            >
-            Novi brings your tasks, conversations, and timelines into one calm,
-            thoughtful workspace built for small, fast moving teams..
-            </motion.p>
-            <motion.div
-            className="hero-actions"
-            variants={entrance}
-            initial="hidden"
-            animate="visible"
-            custom={0.28}
-            >
-            <a className="button button--dark" href="#footer">
-                Start shipping <ArrowRight size={17} />
-            </a>
-            <a className="text-link" href="#hero-story">
-                <span className="play-icon">
-                <Play size={12} fill="currentColor" />
-                </span>{" "}
-                See how it works
-            </a>
-            </motion.div>
-        </div>
-        <motion.div
-            className="hero-feature-story-wrap container"
-            id="hero-story"
-            variants={entrance}
-            initial="hidden"
-            animate="visible"
-            custom={0.38}
+function Hero() {
+  return (
+    <section className="hero-section" id="top">
+      <div className="container hero-copy">
+        <motion.p
+          className="eyebrow"
+          variants={entrance}
+          initial="hidden"
+          animate="visible"
+          custom={0.05}
         >
-            <FeatureStory />
+          <span className="eyebrow-dot" /> BUILT FOR SMALL TEAMS
+        </motion.p>
+        <motion.h1
+          variants={entrance}
+          initial="hidden"
+          animate="visible"
+          custom={0.12}
+        >
+          Less switching.
+          <br />
+          <em>More shipping.</em>
+        </motion.h1>
+        <motion.p
+          className="hero-description"
+          variants={entrance}
+          initial="hidden"
+          animate="visible"
+          custom={0.2}
+        >
+          Novi brings your tasks, conversations, and timelines into one calm,
+          thoughtful workspace built for small, fast moving teams.
+        </motion.p>
+        <motion.div
+          className="hero-actions"
+          variants={entrance}
+          initial="hidden"
+          animate="visible"
+          custom={0.28}
+        >
+          <a className="button button--dark" href="#footer">
+            Start shipping <ArrowRight size={17} />
+          </a>
+          <a className="text-link" href="#hero-story">
+            <span className="play-icon">
+              <Play size={12} fill="currentColor" />
+            </span>{" "}
+            See how it works
+          </a>
         </motion.div>
-        </section>
-    );
-    }
+      </div>
+      <motion.div
+        className="hero-feature-story-wrap container"
+        id="hero-story"
+        variants={entrance}
+        initial="hidden"
+        animate="visible"
+        custom={0.38}
+      >
+        <FeatureStory />
+      </motion.div>
+    </section>
+  );
+}
 
-    export default Hero;
+export default Hero;

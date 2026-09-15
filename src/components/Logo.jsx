@@ -1,7 +1,17 @@
-import logo from '../assets/img/logo.png'
+import logo from "../assets/img/logo.png";
 
 function Logo({ light = false }) {
-  return <a className={`brand ${light ? 'brand--light' : ''}`} href="#top" aria-label="Novi home"><span className="brand-image"><img src={logo} alt="Novi" /></span></a>
+  return (
+    <a
+      className={`brand ${light ? "brand--light" : ""}`}
+      href="#top"
+      aria-label="Novi home"
+    >
+      <span className="brand-image">
+        <img src={logo} alt="Novi" />
+      </span>
+    </a>
+  );
 }
 
-export default Logo
+export default Logo;
