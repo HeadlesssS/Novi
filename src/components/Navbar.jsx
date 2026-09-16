@@ -22,11 +22,11 @@ function Navbar() {
       <nav className="nav container" aria-label="Main navigation">
         <Logo />
         <div className={`nav-links ${menuOpen ? "nav-links--open" : ""}`}>
-          <a href="#features" onClick={closeMenu}>
+          <a href="/#features" onClick={closeMenu}>
             Why Novi
           </a>
-          <a href="#features" onClick={closeMenu}>
-            Features
+          <a href="/product" onClick={closeMenu}>
+            Product
           </a>
           <a href="#footer" onClick={closeMenu}>
             About

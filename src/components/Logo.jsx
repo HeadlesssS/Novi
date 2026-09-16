@@ -4,7 +4,7 @@ function Logo({ light = false }) {
   return (
     <a
       className={`brand ${light ? "brand--light" : ""}`}
-      href="#top"
+      href="/"
       aria-label="Novi home"
     >
       <span className="brand-image">

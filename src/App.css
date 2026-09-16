@@ -1,23 +1,31 @@
 	@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400..700;1,400..700&family=Work+Sans:wght@400;500;600&display=swap");
 
-	:root {
-		--font-display: "Newsreader", Georgia, serif;
-		--font-body: "Work Sans", system-ui, sans-serif;
-		--ink: #26352d;
-		--muted: #657168;
-		--line: #d7ded4;
-		--cream: #f5f1e8;
-		--paper: #fbfaf5;
-		--sage: #c9d9c2;
-		--sage-deep: #7c9b7c;
-		--clay: #e2c9b9;
-		--butter: #eee4b0;
-		--blue: #cbd9df;
-		--dark: #26352d;
-		--accent: #A3301E;
-		--accent-hover: #D86F55;
-	}
-
+:root {
+    --font-display: "Newsreader", Georgia, serif;
+    --font-body: "Work Sans", system-ui, sans-serif;
+    
+    /* High-contrast, sharp typography */
+    --ink: #002611;          /* Deepest pine-black for ultra-crisp text */
+    --muted: #063416;        /* Punchy secondary text */
+    --line: #CBD5E1;         /* Slightly darker border to pop off white */
+    
+    /* Clean white-based surfaces (makes greens feel brighter) */
+    --cream: #F4F7F4;        /* Fresh, cool mint-tinted off-white canvas */
+    --paper: #FFFFFF;        /* Pure white card backgrounds */
+    
+    /* Vibrant card accents (4 distinct pastel tones) */
+    --sage: #DCFCE7;         /* Mint green tint */
+    --clay: #FFEDD5;         /* Warm peach tint */
+    --butter: #FEF9C3;       /* Sun yellow tint */
+    --blue: #E0F2FE;         /* Sky blue tint */
+    
+    --sage-deep: #16A34A;    /* Matching emerald accent */
+    --dark: #06110A;         /* Dark pine footer */
+    
+    /* High-energy Emerald Primary Accents */
+    --accent: #16A34A;       /* Vibrant emerald green */
+    --accent-hover: #15803D; /* Deep emerald hover state */
+}
 	.container {
 		width: min(1180px, calc(100% - 80px));
 		margin-inline: auto;
@@ -106,6 +114,18 @@
 		background: none;
 		cursor: pointer;
 	}
+
+	/* =========================================================
+   Home Hero — Blur Reveal
+   ========================================================= */
+
+.hero-copy h1,
+.hero-description,
+.hero-actions,
+.hero-copy .eyebrow,
+.hero-feature-story-wrap {
+	will-change: transform, opacity, filter;
+}
 
 	.hero-section {
 		position: relative;
@@ -351,21 +371,7 @@
 		margin-left: 10%;
 	}
 
-	.feature-card--sage {
-		background: var(--sage);
-	}
 
-	.feature-card--clay {
-		background: var(--clay);
-	}
-
-	.feature-card--butter {
-		background: var(--butter);
-	}
-
-	.feature-card--blue {
-		background: var(--blue);
-	}
 
 	.feature-card-copy {
 		position: relative;
@@ -458,6 +464,14 @@
 		transform: rotate(-1deg) translate(3px, -4px);
 	}
 
+	.board-column,
+.comment-bubble,
+.timeline-visual {
+    background: #FFFFFF !important;
+    border-color: rgba(15, 23, 42, 0.12) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
 	.board-column {
 		width: 49%;
 		padding: 12px 10px;
@@ -474,10 +488,9 @@
 		letter-spacing: 0.06em;
 	}
 
-	.board-column--active {
-		border-left: 2px solid var(--sage-deep);
-		padding-left: 8px;
-	}
+.board-column--active {
+    border-left: 3px solid var(--accent) !important;
+}
 
 	.mini-task {
 		padding: 11px 9px;
@@ -651,10 +664,9 @@
 		border-radius: 2px;
 	}
 
-	.timeline-bar--sage {
-		width: 58%;
-		background: var(--sage-deep);
-	}
+.timeline-bar--sage {
+    background: var(--accent) !important;
+}
 
 	.timeline-bar--butter {
 		width: 77%;
@@ -840,7 +852,7 @@
 		border: 0;
 		border-radius: 50%;
 		color: var(--ink);
-		background: #A5301E;
+		background:var(--accent);
 		cursor: pointer;
 		transition: background-color 0.25s ease;
 	}
@@ -1798,7 +1810,6 @@
 	}
 
 	.feature-story-status {
-		margin: 7px 0 0;
 		color: #718076;
 		text-align: center;
 		font-size: 11px;
@@ -1813,7 +1824,7 @@
 		display: block;
 		width: clamp(220px, 28vw, 380px);
 		height: auto;
-		margin-top: 8px;
+		margin-top: 10px;
 		filter: drop-shadow(0 2px 4px rgba(38, 53, 45, 0.05));
 	}
 
@@ -2129,18 +2140,125 @@
 		grid-template-columns: repeat(12, minmax(0, 1fr));
 		gap: 12px;
 	}
+/* =========================================================
+   Editorial Feature Colors
+   Synced with Product page
+   ========================================================= */
 
+
+
+/* Boards */
+.features-editorial-grid .feature-card--boards {
+  --feature-accent: #A3301E;
+}
+
+/* Threads */
+.features-editorial-grid .feature-card--threads {
+  --feature-accent: #5B7180;
+}
+
+/* Timeline */
+.features-editorial-grid .feature-card--timeline {
+  --feature-accent: #B58B39;
+}
+
+.features-editorial-grid .editorial-feature-visual {
+  background: color-mix(
+    in srgb,
+    var(--feature-accent) 6%,
+    #eef1eb
+  );
+  border-right: 1px solid color-mix(
+    in srgb,
+    var(--feature-accent) 14%,
+    transparent
+  );
+}
+.features-editorial-grid .editorial-feature--4 .editorial-feature-visual {
+  background: color-mix(
+    in srgb,
+    var(--feature-accent) 6%,
+    #eef1eb
+  );
+  border-right: 0;
+  border-left: 1px solid color-mix(
+    in srgb,
+    var(--feature-accent) 14%,
+    transparent
+  );
+}
+.features-editorial-grid .feature-number {
+  color: var(--feature-accent);
+}
+.features-editorial-grid .feature-card-copy {
+  position: relative;
+}
+
+.features-editorial-grid .feature-card-copy::before {
+  content: "";
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 3px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--feature-accent);
+  opacity: 0.75;
+}
+
+.features-editorial-grid .editorial-feature--2 .feature-card-copy::before,
+.features-editorial-grid .editorial-feature--3 .feature-card-copy::before {
+  top: 35px;
+}
+
+/* Imports */
+.features-editorial-grid .feature-card--imports {
+  --feature-accent: #71856B;
+}
 	.features-editorial-grid .editorial-feature {
-		display: grid;
-		min-width: 0;
-		min-height: 0;
-		overflow: hidden;
-		border: 1px solid #d9ddd5;
-		border-radius: 10px;
-		background: #f8f8f2;
-		box-shadow: none;
-		transform: none;
-	}
+  --feature-accent: #71856B;
+
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+
+  border: 1px solid color-mix(
+    in srgb,
+    var(--feature-accent) 22%,
+    #d9ddd5
+  );
+
+  border-radius: 10px;
+
+  background: color-mix(
+    in srgb,
+    var(--feature-accent) 8%,
+    #f8f8f2
+  );
+
+  box-shadow: none;
+  transform: none;
+}
+/* Boards */
+.features-editorial-grid .feature-card--boards {
+  --feature-accent: #A3301E;
+}
+
+/* Threads */
+.features-editorial-grid .feature-card--threads {
+  --feature-accent: #5B7180;
+}
+
+/* Timeline */
+.features-editorial-grid .feature-card--timeline {
+  --feature-accent: #B58B39;
+}
+
+/* Imports */
+.features-editorial-grid .feature-card--imports {
+  --feature-accent: #71856B;
+}
 
 	.features-editorial-grid .editorial-feature:hover {
 		transform: translateY(-2px);
@@ -2224,20 +2342,25 @@
 	}
 
 	.features-editorial-grid .feature-link {
-		display: grid;
-		width: 31px;
-		height: 31px;
-		padding: 0;
-		place-items: center;
-		border: 1px solid #ccd6cc;
-		border-radius: 50%;
-		color: white;
-		background: var(--accent);
-	}
+  display: grid;
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid color-mix(
+    in srgb,
+    var(--feature-accent) 35%,
+    transparent
+  );
+  border-radius: 50%;
+  color: white;
+  background: var(--feature-accent);
+}
 
 	.features-editorial-grid .feature-link:hover {
-		background: var(--accent-hover);
-	}
+  background: var(--feature-accent);
+  filter: brightness(0.9);
+}
 
 	.features-editorial-grid .feature-link svg {
 		transition: transform 0.25s ease;
