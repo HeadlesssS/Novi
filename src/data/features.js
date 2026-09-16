@@ -22,7 +22,7 @@ export const features = [
     shortLabel: "Threads",
     title: "Threads, not another inbox",
     description: "Keep project conversations attached to the work itself.",
-    accent: "clay",
+    accent: "accent",
     icon: MessageSquare,
     visual: "thread",
   },

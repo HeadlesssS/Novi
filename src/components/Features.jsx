@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { features } from "../data/features";
 import FeatureCard from "./FeatureCard";
+import flowerSticker from "../assets/img/stickers/flower.png";
 
 function Features() {
   return (
@@ -23,9 +24,9 @@ function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Everyone, Everything at sync
+            Everyone, Everything in sync
             <br />
-            <em>& Novi keeps it that way.</em>
+            <em>&amp; Novi keeps it that way.</em>
           </motion.h2>
 
           <motion.p
@@ -47,6 +48,12 @@ function Features() {
               index={index}
             />
           ))}
+        </div>
+        
+        <div className="features-flower-bundle" aria-hidden="true">
+          <img className="flower-side flower-left" src={flowerSticker} alt="" />
+          <img className="flower-center" src={flowerSticker} alt="" />
+          <img className="flower-side flower-right" src={flowerSticker} alt="" />
         </div>
       </div>
     </section>

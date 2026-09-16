@@ -24,7 +24,11 @@ function Footer() {
                 placeholder="Your email address"
                 required
               />
-              <button type="submit" aria-label="Join Novi">
+              <button
+                type="submit"
+                aria-label="Join Novi"
+                className="join-button"
+              >
                 <ArrowUpRight size={20} />
               </button>
             </form>

@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import productVisual from "../assets/img/NoviCTA.png";
 import mobileProductVisual from "../assets/img/NoviBoard.png";
+import flowerSticker from "../assets/img/stickers/flower.png";
 
 function NoviCTA() {
   return (
@@ -44,6 +45,13 @@ function NoviCTA() {
             />
           </div>
         </div>
+        
+        <img
+          className="cta-flower-sticker"
+          src={flowerSticker}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
     </section>
   );

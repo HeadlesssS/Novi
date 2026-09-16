@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { features } from "../data/features";
 import unifiedWorkspaceVideo from "../assets/video/Novi.mp4";
+import botanicalDivider from "../assets/img/stickers/betn.png";
 
 const storyFeatures = features;
 const stageNames = [
@@ -219,13 +220,19 @@ function FeatureStory() {
           </button>
         ))}
       </div>
-      <p className="feature-story-status">
-        {activeStage === 5
-          ? "Everything comes together in Novi."
-          : activeStage === 4
-            ? "Everyone, everything in sync at Novi."
-            : `${stageNames[activeStage]} ${activeStage < 3 ? "+" : ""}`}
-      </p>
+      <div className="feature-story-status">
+        {activeStage === 5 ? (
+          <img
+            className="feature-story-status-img"
+            src={botanicalDivider}
+            alt="Everything comes together in Novi."
+          />
+        ) : activeStage === 4 ? (
+          "Everyone, everything in sync at Novi."
+        ) : (
+          `${stageNames[activeStage]} ${activeStage < 3 ? "+" : ""}`
+        )}
+      </div>
     </motion.div>
   );
 }

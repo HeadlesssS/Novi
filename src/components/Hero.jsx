@@ -1,5 +1,8 @@
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "motion/react";
+import growthSticker from "../assets/img/stickers/growthh.png";
+import halfSunSticker from "../assets/img/stickers/sun.png";
+import vineSticker from "../assets/img/stickers/vine.png";
 import FeatureStory from "./FeatureStory";
 
 const entrance = {
@@ -42,7 +45,7 @@ function Hero() {
           custom={0.2}
         >
           Novi brings your tasks, conversations, and timelines into one calm,
-          thoughtful workspace built for small, fast moving teams.
+          thoughtful workspace built for small, fast-moving teams.
         </motion.p>
         <motion.div
           className="hero-actions"
@@ -70,7 +73,28 @@ function Hero() {
         animate="visible"
         custom={0.38}
       >
-        <FeatureStory />
+        <img
+          className="hero-story-sticker hero-story-sticker--growth"
+          src={growthSticker}
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          className="hero-story-sticker hero-story-sticker--sun"
+          src={halfSunSticker}
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          className="hero-story-sticker hero-story-sticker--vine"
+          src={vineSticker}
+          alt=""
+          aria-hidden="true"
+        />
+
+          <div className="hero-feature-story-content">
+    <FeatureStory />
+  </div>
       </motion.div>
     </section>
   );
