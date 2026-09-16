@@ -1,16 +1,44 @@
-# React + Vite
+# Novi
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive landing page for **Novi**, a project and task management tool designed for small, fast-moving teams.
 
-Currently, two official plugins are available:
+> Less switching. More shipping.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Preview
 
-## React Compiler
+https://novi-yournewpm.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Overview
 
-## Expanding the Oxlint configuration
+Novi brings tasks, conversations, timelines, and project context into one calm workspace for teams that move quickly.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+The landing page uses an editorial visual direction with warm neutral tones, expressive typography, custom product visuals, organic decorative elements, and subtle motion.
+
+## Highlights
+
+- Responsive experience across desktop, tablet, and mobile
+- Interactive product storytelling
+- Animated transitions and scroll-based motion
+- Desktop drag and mobile swipe interactions
+- Custom product UI visuals and supporting illustrations
+- Reusable React components
+- Responsive feature layouts and product mockups
+- Responsive navigation and CTA sections
+- Custom editorial typography and visual system
+
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Motion
+- Lucide React
+
+## Run Locally
+
+```bash
+git clone https://github.com/HeadlesssS/Novi
+cd Novi
+npm install
+npm run dev
