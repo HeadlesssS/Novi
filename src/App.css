@@ -75,10 +75,13 @@
 		transition: color 0.25s ease;
 	}
 
-	.nav-links a:not(.nav-cta):hover,
+	.nav-links a:not(.nav-cta):hover {
+		color: #000000;
+	}
+
 	.footer-links a:hover,
 	.footer-legal a:hover {
-		color: #000000;
+		color: #FFFFFF;
 	}
 
 	.nav-cta {
@@ -882,6 +885,7 @@
 
 	.footer-links a {
 		text-decoration: none;
+		transition: color 0.25s ease;
 	}
 
 	.footer-bottom {
@@ -921,6 +925,7 @@
 
 	.footer-legal a {
 		text-decoration: none;
+		transition: color 0.25s ease;
 	}
 
 	a:focus-visible,
